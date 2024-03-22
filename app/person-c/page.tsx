@@ -11,7 +11,7 @@ const PeoplePage = () => {
 
   useEffect(() => {
     const fetchPeople = async () => {
-      const response = await fetch(` https://387cytdkp1.execute-api.us-east-1.amazonaws.com/default/dbdemofunction `,{
+      const response = await fetch(` https://365jj5r2md.execute-api.us-east-1.amazonaws.com/default/dbdemofunction `,{
         method: 'GET',
         headers: new Headers({
           //'Authorization': `Bearer ${bearerToken}`,

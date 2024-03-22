@@ -8,7 +8,7 @@ const PeoplePage = async () => {
   const bearerToken = process.env.API_BEARER_TOKEN; // Ensure this is set in your .env (not .env.local since it's a server component)
 
   // Fetch people data
-  const response = await fetch(` https://387cytdkp1.execute-api.us-east-1.amazonaws.com/default/dbdemofunction`, {
+  const response = await fetch(`https://365jj5r2md.execute-api.us-east-1.amazonaws.com/default/dbdemofunction`, {
     method: 'GET',
     headers: {
       'Authorization': `Bearer ${bearerToken}`,
