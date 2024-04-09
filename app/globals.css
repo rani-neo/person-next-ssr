@@ -15,12 +15,14 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: rgb(255, 255, 255); /* Set background to plain white */
+  background-color: rgb(255, 255, 255);
+  /* Set background to plain white */
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: rgb(var(--background-rgb)); /* Optional: set to black in dark mode */
+    background-color: rgb(var(--background-rgb));
+    /* Optional: set to black in dark mode */
   }
 }
 

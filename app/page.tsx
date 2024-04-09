@@ -1,5 +1,10 @@
 // pages/index.tsx
 import Link from 'next/link';
+//import { withAuthenticator } from '@aws-amplify/ui-react';
+//import { useForm } from 'react-hook-form';
+import withAuth from '@/utils/withAuth';
+import { Auth } from 'aws-amplify';
+
 
 const HomePage = () => {
   return (
@@ -31,4 +36,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default withAuth(HomePage);
