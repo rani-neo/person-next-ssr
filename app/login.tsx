@@ -1,6 +1,7 @@
 import { Authenticator, useAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
-import { Auth } from 'aws-amplify';
+import { signIn, SignInInput } from 'aws-amplify/auth'; // Import signIn and SignInInput
+
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
@@ -11,16 +12,22 @@ const Login = () => {
     useEffect(() => {
         const checkUser = async () => {
             try {
-                const user = await Auth.currentAuthenticatedUser();
-                if (user) {
-                    router.push('/dashboard');
-                }
+                // Provide input parameters (username/email and password) to signIn
+                const input: SignInInput = {
+                    username: 'username', // Replace with actual username or email
+                    password: 'password', // Replace with actual password
+                };
+                await signIn(input);
+
+                // If signIn succeeds, redirect to dashboard
+                router.push('/dashboard');
             } catch (error) {
                 // User is not logged in
+                // Handle the error or leave it empty if no action is required
             }
         };
         checkUser();
-    }, [router, user]);
+    }, [router]); // Removed 'user' from dependencies as it's not used inside the useEffect
 
     return <Authenticator />;
 };

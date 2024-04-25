@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@aws-amplify/core": "^6.0.28",
     "@aws-amplify/ui-react": "^6.1.6",
     "@aws-amplify/ui-react-core": "^3.0.12",
+    "@aws-crypto/sha256-js": "^5.2.0",
     "auth": "^1.0.2",
-    "aws-amplify": "^5.3.18",
+    "aws-amplify": "^6.0.30",
     "aws-amplify-react": "^5.1.43",
     "aws-sdk": "^2.1594.0",
     "next": "^14.1.4",
