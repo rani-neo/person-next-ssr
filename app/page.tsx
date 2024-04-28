@@ -1,16 +1,7 @@
 // pages/index.tsx
-'use client'
 import Link from 'next/link';
-import withAuth from './app/withAuth';
 
-
-// Adjust the path as needed
-
- // Check the casing of directory and file
-import { FC } from 'react';
-import page from './page'; // Assuming the component is named 'Page'
-
-const pageWithAuth: FC = () => {
+const HomePage = () => {
   return (
     <div className="container mx-auto px-4">
       <h1 className="text-2xl font-bold my-4">Next.js Rendering Strategies</h1>
@@ -40,4 +31,4 @@ const pageWithAuth: FC = () => {
   );
 };
 
-export default withAuth(pageWithAuth); // Exporting the component with authentication
+export default HomePage;
