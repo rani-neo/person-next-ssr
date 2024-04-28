@@ -1,6 +1,5 @@
 // pages/index.tsx
 import Link from 'next/link';
-
 const HomePage = () => {
   return (
     <div className="container mx-auto px-4">
